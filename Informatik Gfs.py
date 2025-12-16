@@ -4,6 +4,8 @@ from tkinter import *
 #random wird benötigit um zufällige operationen aufrufen zu könnnen.
 import random
 
+import os
+
 #Größe des Spielfeldes
 GAME_WIDTH =  700
 GAME_HEIGHT = 700
@@ -46,8 +48,8 @@ class Food:
     def __init__(self):
         #random.ranint generiert einen Zufälligen integer diesen kann man begrenzen durch die Angabe eines Rahmens z.b (0, 4).
         #Hier würde eine zufällige volle Zahl zwischen 0 und 4 generiert.
-        x = random.randint(0, (GAME_WIDTH/SPACE_SIZE)-1) * SPACE_SIZE
-        y =random.randint(0, (GAME_HEIGHT/SPACE_SIZE)-1) * SPACE_SIZE
+        x = random.randint(0, int(GAME_WIDTH/SPACE_SIZE)-1) * SPACE_SIZE
+        y =random.randint(0, int(GAME_HEIGHT/SPACE_SIZE)-1) * SPACE_SIZE
 
         self.coordinates = [x,y]
 
@@ -158,11 +160,14 @@ window.title("GUI SNAKE TEST")
 #Das erste False sperrt die Anpassung in die Breite und das Zweite Sperrt die Anpassung in die Höhe
 window.resizable(False,False)
 
-#Iconphoto bestimmt das oberige icon des Programmes unter Linux
-#window.iconphoto(False, PhotoImage(file="./tetris.png"))
+#Iconphoto bestimmt das oberige icon des Programmes
+#window.iconphoto(False, PhotoImage(file="/home/noah/Dokumente/After 12.9.23/Informatik/tetris.png"))
 
-#Iconphoto bestimmt das oberige icon des Programmes unter Windows
-#window.iconphoto(False, PhotoImage(file="tetris.png"))
+script_dir = os.path.dirname(os.path.abspath(__file__))
+image_path = os.path.join(script_dir, "tetris.png")  # Builds the full path
+icon = PhotoImage(file=image_path)
+window.iconphoto(False, icon)
+
 
 score = 0
 direction = 'down'
@@ -200,7 +205,7 @@ window.bind("s", lambda event: change_direction('down'))
 def exit():
       window.destroy()
       print("\033[38;2;0;255;0m You left the Matrix")
-      print("""                  __
+      print(r"""                  __
       _______    /*_>-<
   ___/ _____ \__/ /
  <____/     \____/""")
