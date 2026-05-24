@@ -1,32 +1,32 @@
-#  GUI Snake Game – Python & Tkinter
+# GUI Snake Game – Python & Tkinter
 
-Ein klassisches Snake-Spiel mit grafischer Benutzeroberfläche, entwickelt in Python mit `tkinter`.  
-Das Projekt unterstützt Tastatursteuerung, Punktesystem, Gewinnbedingung und Game-Over-Logik.
-
----
-
-#  Vorschau
-
-Das Spiel besteht aus:
-
-- Einer steuerbaren Schlange
-- Zufällig generierenden Äpfeln
-- Punktestand-Anzeige
-- Gewinn- und Game-Over-Screen
-- Tastatursteuerung via Pfeiltasten oder WASD
+A classic Snake game with a graphical user interface, developed in Python using `tkinter`.
+The project supports keyboard controls, a scoring system, win conditions, and game-over logic.
 
 ---
 
-#  Technologien
+# Preview
 
-- Python 3
-- Tkinter (GUI)
-- Random
-- OS-Modul
+The game consists of:
+
+* A controllable snake
+* Randomly generated apples
+* Score display
+* Win and game-over screens
+* Keyboard controls via arrow keys or WASD
 
 ---
 
-# Projektstruktur
+# Technologies
+
+* Python 3
+* Tkinter (GUI)
+* Random
+* OS module
+
+---
+
+# Project Structure
 
 ```bash
 project/
@@ -38,15 +38,15 @@ project/
 
 ---
 
-# Installation & Ausführung
+# Installation & Execution
 
-## 1. Python installieren
+## 1. Install Python
 
-Benötigt wird:
+Required:
 
-- Python 3.10 oder neuer
+* Python 3.10 or newer
 
-Prüfen mit:
+Check with:
 
 ```bash
 python --version
@@ -54,7 +54,7 @@ python --version
 
 ---
 
-## 2. Projekt herunterladen
+## 2. Download the Project
 
 ```bash
 git clone https://github.com/Mythryl-dev/Python_Snake_Game_in_Tkinter.git
@@ -63,7 +63,7 @@ cd Python_Snake_Game_in_Tkinter
 
 ---
 
-## 3. Spiel starten
+## 3. Start the Game
 
 ```bash
 python snake.py
@@ -71,46 +71,48 @@ python snake.py
 
 ---
 
-# Steuerung
+# Controls
 
-| Taste | Funktion |
-|------|-----------|
-| ↑ / W | Nach oben |
-| ↓ / S | Nach unten |
-| ← / A | Nach links |
-| → / D | Nach rechts |
-| Q | Spiel beenden |
-| ESC | Spiel beenden |
-
----
-
-#  Spielmechanik
-
-- Die Schlange bewegt sich kontinuierlich über das Spielfeld.
-- Beim Einsammeln eines Apfels:
-  - wächst die Schlange,
-  - der Punktestand erhöht sich,
-  - ein neuer Apfel erscheint zufällig.
-- Das Spiel endet bei:
-  - Kollision mit dem Rand,
-  - Kollision mit dem eigenen Körper.
-- Bei 30 Punkten gewinnt der Spieler.
+| Key   | Function   |
+| ----- | ---------- |
+| ↑ / W | Move up    |
+| ↓ / S | Move down  |
+| ← / A | Move left  |
+| → / D | Move right |
+| Q     | Quit game  |
+| ESC   | Quit game  |
 
 ---
 
-# Bildschirmauflösung
+# Game Mechanics
 
-Das Spiel ist aktuell optimiert für:
+* The snake continuously moves across the game field.
+* When collecting an apple:
 
-- 2560×1440 mit 225 % Skalierung
+  * the snake grows,
+  * the score increases,
+  * a new apple appears randomly.
+* The game ends when:
 
-Alternative Werte für 1920×1080 sind bereits im Code vorhanden und können aktiviert werden.
+  * colliding with the wall,
+  * colliding with its own body.
+* The player wins at 30 points.
 
 ---
 
-# Anpassungsmöglichkeiten
+# Screen Resolution
 
-Folgende Werte können einfach im Code verändert werden:
+The game is currently optimized for:
+
+* 2560×1440 with 225% scaling
+
+Alternative values for 1920×1080 are already included in the code and can be enabled.
+
+---
+
+# Customization Options
+
+The following values can easily be changed in the code:
 
 ```python
 SPEED = 100
@@ -118,7 +120,7 @@ SPACE_SIZE = 100
 BODY_PARTS = 3
 ```
 
-## Farben ändern
+## Change Colors
 
 ```python
 SNAKE_COLOUR = "#00FF00"
@@ -127,24 +129,25 @@ BACKGROUND_COLOUR = "#000000"
 ```
 
 ---
-## Spielfeldgröße
+
+## Game Field Size
 
 ```python
 GAME_WIDTH = 1137 * 2
 GAME_HEIGHT = 640 * 2
 ```
 
-## Geschwindigkeit
+## Speed
 
 ```python
 SPEED = 100
 ```
 
-Je höher der Wert, desto langsamer läuft das Spiel.
+The higher the value, the slower the game runs.
 
 ---
 
-## Zoom / Rastergröße
+## Zoom / Grid Size
 
 ```python
 SPACE_SIZE = 50 * 2
@@ -152,33 +155,32 @@ SPACE_SIZE = 50 * 2
 
 ---
 
-#  Features
+# Features
 
-- GUI mit Tkinter  
-- Punktestand-System  
-- Zufällige Food-Generierung  
-- Gewinnbedingung  
-- Game-Over-Screen  
-- Tastatursteuerung  
-- Zentrierung des Fensters  
-- Eigenes Fenster-Icon  
-
----
-#  Lernziele des Projekts
-
-Dieses Projekt eignet sich besonders zum Lernen von:
-
-- Objektorientierter Programmierung (OOP)
-- GUI-Entwicklung mit Tkinter
-- Event-Handling
-- Spiel-Logik
-- Kollisionsabfragen
-- Arbeiten mit Klassen und Funktionen
+* GUI with Tkinter
+* Score system
+* Random food generation
+* Win condition
+* Game-over screen
+* Keyboard controls
+* Centered game window
+* Custom window icon
 
 ---
 
-# Bekannte Bugs
+# Learning Goals of the Project
 
-- manchmal generiert ein Apfel in dem Körper der Schlange
+This project is especially suitable for learning:
+
+* Object-oriented programming (OOP)
+* GUI development with Tkinter
+* Event handling
+* Game logic
+* Collision detection
+* Working with classes and functions
 
 ---
+
+# Known Bugs
+
+* Sometimes an apple spawns inside the snake’s body
